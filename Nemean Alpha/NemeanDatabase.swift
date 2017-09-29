@@ -199,11 +199,51 @@ class NemeanDatabase {
     
     // MARK: Read Functions
     
+    
+    func getAppData() -> AppDataDataObject {
+        var addo = AppDataDataObject(id: 1)
+
+        do {
+            for app in try db!.prepare(app_table) {
+                addo.app_name = app[app_name]
+                addo.navigation_id = app[navigation_id]
+            }
+        } catch {
+            print("SELECT failed in getAppData()")
+        }
+        
+//        do {
+//            for app in try db!.prepare(app_table){
+//                addo.app_name = app[app_name]
+//                addo.navigation_id = app[navigation_id]
+//            } catch {
+//                print("SELECT failed in getAppData()")
+//            }
+//        }
+        
+        return addo
+    }
+    
+    func getNavigationId() -> Int64 {
+        var nav_id:Int64 = 0
+        
+        do {
+            for app in try db!.prepare(app_table){
+                nav_id = app[navigation_id]
+            }
+        } catch {
+            print("SELECT error in getNavigationId")
+        }
+        
+        return nav_id
+    }
+
     func getAllScreens() -> [ScreenDataObject] {
         var screens = [ScreenDataObject]()
         
         do {
-            for screen in try db!.prepare(self.screens_table){
+            let query = screens_table.order(screen_order_number)
+            for screen in try db!.prepare(query){
                 screens.append(ScreenDataObject(
                 uuid: screen[uuid],
                 name: screen[screen_name]!,
@@ -222,9 +262,26 @@ class NemeanDatabase {
         return selected_screen
     }
     
+    func getScreenMetadata(given_screen_uuid: String) -> ScreenDataObject {
+        var current_screen: ScreenDataObject?
+        
+        do {
+            let screenDataQuery = screens_table.filter(uuid == given_screen_uuid).limit(1)
+            for screen in try db!.prepare(screenDataQuery){
+                current_screen = ScreenDataObject()
+                current_screen!.uuid = screen[uuid];
+                current_screen!.name = screen[screen_name]!;
+                current_screen!.order = screen[screen_order_number]
+            }
+        } catch {
+            print("Failed to select screen only data from uuid")
+        }
+        return current_screen!
+    }
+    
     func getScreenDataByUuid(given_screen_uuid: String) -> [DataObjectProtocol] {
         
-        var current_screen: ScreenDataObject = ScreenDataObject()
+        var current_screen: ScreenDataObject?
         protocolDataObjectList.removeAll()
         
         // Get details from the screen table about the screen with known uuid
@@ -232,11 +289,11 @@ class NemeanDatabase {
         do {
             let query = screens_table.filter(uuid == given_screen_uuid).limit(1)
             for screen in try db!.prepare(query){
-                
+                current_screen = ScreenDataObject()
                 print("Current screen - name: \n \(screen[screen_name]) \n")
-                current_screen.uuid = screen[uuid];
-                current_screen.name = screen[screen_name]!;
-                current_screen.order = screen[screen_order_number]
+                current_screen!.uuid = screen[uuid];
+                current_screen!.name = screen[screen_name]!;
+                current_screen!.order = screen[screen_order_number]
             }
         } catch {
             print("Failed to select screen from uuid")
@@ -246,7 +303,7 @@ class NemeanDatabase {
         
         do {
             let textQuery = texts_table.filter(screen_uuid == given_screen_uuid)
-            for text in try db!.prepare(self.texts_table){
+            for text in try db!.prepare(textQuery){
                 //print("Text: \n \(text) \n")
                 //var tdo : TextfieldDataObject = TextfieldDataObject()
                 protocolDataObjectList.append(TextfieldDataObject(
@@ -282,9 +339,12 @@ class NemeanDatabase {
         
         // Eventually update to Comparator (ie for constraints?) - see bookmark
         protocolDataObjectList.sort{$0.vertical_align < $1.vertical_align}
-        
-        protocolDataObjectList.append(current_screen)
-        
+        if (current_screen != nil){
+            print("current_screen is not nil")
+            protocolDataObjectList.append(current_screen!)
+        } else {
+            print("current screen is nil")
+        }
         //print("Current screen: \n \(current_screen) \n")
         //print("Current screen - UUID: \n \(current_screen.uuid) \n")
         //print("Current screen - name: \n \(current_screen.name) \n")
@@ -312,6 +372,27 @@ class NemeanDatabase {
         }
             return constraints
     }
+    
+    func getAllConstraintsByUuid(given_view_object_uuid: String) -> [ConstraintDataObject] {
+        var constraintsByUuid = [ConstraintDataObject]()
+        
+        do {
+            let constraintByUuidQuery = constraints_table.filter(start_id == given_view_object_uuid)
+            for constraint in try db!.prepare(constraintByUuidQuery){
+                constraintsByUuid.append(ConstraintDataObject(
+                    screen_uuid: constraint[screen_uuid],
+                    start_id: constraint[start_id],
+                    start_side: constraint[start_side],
+                    end_id: constraint[end_id],
+                    end_side: constraint[end_side],
+                    margin: constraint[margin]))
+            }
+        } catch {
+            print("SELECT failed in getAllConstraingsByUuid")
+        }
+        return constraintsByUuid
+    }
+    
 
     // MARK: Delete Functions
     

@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         print("View Superview: \(view.superview) \n")
     
         
-        screen_data = NemeanDatabase.instance.getScreenDataByUuid(given_screen_uuid: "uuid123")
+        screen_data = NemeanDatabase.instance.getScreenDataByUuid(given_screen_uuid: "aaa")
        
         for screen_datum in screen_data {
             

@@ -7,24 +7,90 @@
 //
 
 import UIKit
+import Material
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var screens = [ScreenDataObject]()
+    var nav_id = NemeanDatabase.instance.getNavigationId()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Initialize the window
         window = UIWindow(frame: UIScreen.main.bounds)
-
-        // Allocate memory for an instance of the 'MainViewController' class
-        let mainViewController = MainViewController()
         
+        screens = NemeanDatabase.instance.getAllScreens()
+        
+        //let tabNav = UITabBarController()
+        // let tabNav = TabNavViewController()
+        //let swipeNav = UIPageViewController()
+       // let swipeNav = PageSwipeViewController()
+        
+        // Allocate memory for an instance of the 'MainViewController' class
+        
+        
+        // TODO: set up as mainViewController from first screen via screen_orders
+        let mainViewController = MainViewController(screen_uuid: "uuid123")
+        let navDrawerRootViewController = NavDrawerRootViewController(screen_uuid: "uuid123")
+        //let testViewController = MainViewController(screen_uuid: "Swipe Nav Test")
         mainViewController.view.backgroundColor = UIColor.white
         
-        // Set the root view controller of the app's window
-        window!.rootViewController = mainViewController
+        
+        print("Navigation Id: \(nav_id)")
+        //nav_id = 1
+        switch nav_id {
+        case 1:
+            /*
+             Tab Navigation
+             */
+            print("Case: Tab Navigation")
+            
+//            var tabViewControllers = [UIViewController]()
+//            for screen in screens {
+//                tabViewControllers.append(MainViewController(screen_uuid: screen.uuid))
+//            }
+            let tabView = TabNavViewController()
+//            view.viewControllers = tabViewControllers
+            //tabNav.viewControllers = tabViewControllers
+            
+            //let appToolbarController = RootAppToolbarController(rootViewController: view)
+
+            window!.rootViewController = tabView
+
+        case 2:
+            /*
+             Swipe Navigation
+             */
+            print("Case: Swipe Navigation")
+//            var swipeViewControllers = [UIViewController]()
+//            
+//            for screen in screens {
+//                swipeViewControllers.append(MainViewController(screen_uuid: screen.uuid))
+//            }
+//            
+//            swipeNav.setViewControllers(swipeViewControllers, direction: .forward, animated: false, completion: {done in})
+            let swipeNav = PageSwipeViewController()
+
+            let appToolbarController = RootAppToolbarController(rootViewController: swipeNav)
+            
+            window!.rootViewController = appToolbarController
+            //window!.rootViewController = UINavigationController(rootViewController: swipeNav)
+            
+        case 3:
+            /*
+            Drawer Navigation
+            */
+            print("Case: Drawer Navigation")
+            let leftViewController = NavigationDrawerTableViewController()
+            let appToolbarController = AppToolbarController(rootViewController: navDrawerRootViewController)
+            
+            window!.rootViewController = NavigationDrawerController(rootViewController: appToolbarController, leftViewController: leftViewController)
+            
+            break
+        default:
+            break
+        }
         
         // Make the window visible
         window!.makeKeyAndVisible()

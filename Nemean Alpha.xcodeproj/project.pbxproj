@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E46439D61F6AFA05009C2641 /* PageSwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46439D51F6AFA05009C2641 /* PageSwipeViewController.swift */; };
 		E47DF6071F53DA7100BE10D6 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DF6061F53DA7100BE10D6 /* Image.swift */; };
 		E491FBD51F5746B10062044D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E491FBD41F5746B10062044D /* MainViewController.swift */; };
 		E491FBD71F587D670062044D /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E491FBD61F587D670062044D /* Screen.swift */; };
 		E491FBDC1F5B10070062044D /* ConstraintDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E491FBDB1F5B10070062044D /* ConstraintDataObject.swift */; };
 		E491FBDD1F5B10070062044D /* ConstraintDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E491FBDB1F5B10070062044D /* ConstraintDataObject.swift */; };
-		E491FBDF1F5B28470062044D /* NemeanDatabase.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = E491FBDE1F5B28470062044D /* NemeanDatabase.sqlite3 */; };
-		E491FBE01F5B28470062044D /* NemeanDatabase.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = E491FBDE1F5B28470062044D /* NemeanDatabase.sqlite3 */; };
+		E4B593471F773DE200E7178D /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B593461F773DE200E7178D /* LeftViewController.swift */; };
+		E4B593491F773E4300E7178D /* AppToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B593481F773E4300E7178D /* AppToolbarController.swift */; };
+		E4B593501F773F7700E7178D /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B5934F1F773F3500E7178D /* Material.framework */; };
+		E4B593521F77419000E7178D /* TransitionedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B593511F77419000E7178D /* TransitionedViewController.swift */; };
+		E4B593541F797AF000E7178D /* NavigationDrawerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B593531F797AF000E7178D /* NavigationDrawerTableViewController.swift */; };
+		E4B593561F797F0B00E7178D /* ScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B593551F797F0B00E7178D /* ScreenTableViewCell.swift */; };
+		E4B593591F7AAAB000E7178D /* NavDrawerRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B593581F7AAAB000E7178D /* NavDrawerRootViewController.swift */; };
+		E4B593651F7B209000E7178D /* RootAppToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B593641F7B209000E7178D /* RootAppToolbarController.swift */; };
+		E4B593791F7B282400E7178D /* TabNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B593781F7B282400E7178D /* TabNavViewController.swift */; };
 		E4B7E2F61F5205A9003C46A3 /* DataObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B7E2F51F5205A9003C46A3 /* DataObjectProtocol.swift */; };
+		E4C65D3F1F646338007F8831 /* NemeanDatabase.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = E4C65D3E1F646338007F8831 /* NemeanDatabase.sqlite3 */; };
 		E4CC58BB1F4CAC4D000A3844 /* AppDataDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC58BA1F4CAC4D000A3844 /* AppDataDataObject.swift */; };
 		E4CC58BD1F4CB12D000A3844 /* ImageDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC58BC1F4CB12D000A3844 /* ImageDataObject.swift */; };
 		E4CC58BF1F4CB321000A3844 /* TextfieldDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC58BE1F4CB321000A3844 /* TextfieldDataObject.swift */; };
@@ -32,6 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E4B5934E1F773F3500E7178D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4B5934A1F773F3500E7178D /* Material.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 963832361B88DFD80015F710;
+			remoteInfo = Material;
+		};
 		E4E57E7B1F60812700AA35C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E4E57E6C1F60812700AA35C9 /* Kingfisher.xcodeproj */;
@@ -200,24 +216,6 @@
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4E57E961F60819F00AA35C9 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4E57E971F6081A500AA35C9 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E4F9398A1F4C92E90000B37F /* Embed Frameworks (1 item) */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,12 +230,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E46439D51F6AFA05009C2641 /* PageSwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageSwipeViewController.swift; sourceTree = "<group>"; };
 		E47DF6061F53DA7100BE10D6 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E491FBD41F5746B10062044D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E491FBD61F587D670062044D /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		E491FBDB1F5B10070062044D /* ConstraintDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDataObject.swift; sourceTree = "<group>"; };
-		E491FBDE1F5B28470062044D /* NemeanDatabase.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = NemeanDatabase.sqlite3; sourceTree = "<group>"; };
+		E4B593461F773DE200E7178D /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		E4B593481F773E4300E7178D /* AppToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppToolbarController.swift; sourceTree = "<group>"; };
+		E4B5934A1F773F3500E7178D /* Material.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Material.xcodeproj; path = "../../../Downloads/Material-master/Material.xcodeproj"; sourceTree = "<group>"; };
+		E4B593511F77419000E7178D /* TransitionedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionedViewController.swift; sourceTree = "<group>"; };
+		E4B593531F797AF000E7178D /* NavigationDrawerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationDrawerTableViewController.swift; sourceTree = "<group>"; };
+		E4B593551F797F0B00E7178D /* ScreenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTableViewCell.swift; sourceTree = "<group>"; };
+		E4B593581F7AAAB000E7178D /* NavDrawerRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavDrawerRootViewController.swift; sourceTree = "<group>"; };
+		E4B593641F7B209000E7178D /* RootAppToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootAppToolbarController.swift; sourceTree = "<group>"; };
+		E4B593781F7B282400E7178D /* TabNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabNavViewController.swift; sourceTree = "<group>"; };
 		E4B7E2F51F5205A9003C46A3 /* DataObjectProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataObjectProtocol.swift; sourceTree = "<group>"; };
+		E4C65D3E1F646338007F8831 /* NemeanDatabase.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; name = NemeanDatabase.sqlite3; path = ../../../Desktop/NemeanDatabase.sqlite3; sourceTree = "<group>"; };
 		E4CC58BA1F4CAC4D000A3844 /* AppDataDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataDataObject.swift; sourceTree = "<group>"; };
 		E4CC58BC1F4CB12D000A3844 /* ImageDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDataObject.swift; sourceTree = "<group>"; };
 		E4CC58BE1F4CB321000A3844 /* TextfieldDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextfieldDataObject.swift; sourceTree = "<group>"; };
@@ -262,6 +270,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B593501F773F7700E7178D /* Material.framework in Frameworks */,
 				E4F939861F4C92E90000B37F /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +292,27 @@
 				E491FBD61F587D670062044D /* Screen.swift */,
 			);
 			name = ViewObjects;
+			sourceTree = "<group>";
+		};
+		E4B5934B1F773F3500E7178D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4B5934F1F773F3500E7178D /* Material.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4B593571F7AA88C00E7178D /* NavigationDrawerViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4B593481F773E4300E7178D /* AppToolbarController.swift */,
+				E4B593461F773DE200E7178D /* LeftViewController.swift */,
+				E4B593531F797AF000E7178D /* NavigationDrawerTableViewController.swift */,
+				E4B593551F797F0B00E7178D /* ScreenTableViewCell.swift */,
+				E4B593511F77419000E7178D /* TransitionedViewController.swift */,
+				E4B593581F7AAAB000E7178D /* NavDrawerRootViewController.swift */,
+			);
+			name = NavigationDrawerViewControllers;
 			sourceTree = "<group>";
 		};
 		E4CC58B91F4CAC20000A3844 /* DataObjects */ = {
@@ -320,11 +350,12 @@
 		E4F939411F4C90790000B37F = {
 			isa = PBXGroup;
 			children = (
-				E491FBDE1F5B28470062044D /* NemeanDatabase.sqlite3 */,
+				E4C65D3E1F646338007F8831 /* NemeanDatabase.sqlite3 */,
 				E4F9394C1F4C90790000B37F /* Nemean Alpha */,
 				E4F939611F4C90790000B37F /* Nemean AlphaTests */,
 				E4F9394B1F4C90790000B37F /* Products */,
 				E4E57E6C1F60812700AA35C9 /* Kingfisher.xcodeproj */,
+				E4B5934A1F773F3500E7178D /* Material.xcodeproj */,
 				E4F9396D1F4C927A0000B37F /* SQLite.xcodeproj */,
 			);
 			sourceTree = "<group>";
@@ -341,16 +372,20 @@
 		E4F9394C1F4C90790000B37F /* Nemean Alpha */ = {
 			isa = PBXGroup;
 			children = (
+				E4B593571F7AA88C00E7178D /* NavigationDrawerViewControllers */,
 				E47DF6051F53DA2900BE10D6 /* ViewObjects */,
 				E4CC58B91F4CAC20000A3844 /* DataObjects */,
 				E4F9398B1F4C936A0000B37F /* Database */,
 				E4F9394D1F4C90790000B37F /* AppDelegate.swift */,
 				E4F9394F1F4C90790000B37F /* ViewController.swift */,
+				E46439D51F6AFA05009C2641 /* PageSwipeViewController.swift */,
 				E491FBD41F5746B10062044D /* MainViewController.swift */,
 				E4F939511F4C90790000B37F /* Main.storyboard */,
 				E4F939541F4C90790000B37F /* Assets.xcassets */,
 				E4F939561F4C90790000B37F /* LaunchScreen.storyboard */,
 				E4F939591F4C90790000B37F /* Info.plist */,
+				E4B593641F7B209000E7178D /* RootAppToolbarController.swift */,
+				E4B593781F7B282400E7178D /* TabNavViewController.swift */,
 			);
 			path = "Nemean Alpha";
 			sourceTree = "<group>";
@@ -398,8 +433,6 @@
 				E4F939481F4C90790000B37F /* Resources */,
 				E4F9398A1F4C92E90000B37F /* Embed Frameworks (1 item) */,
 				E4E57E951F60818400AA35C9 /* Copy Frameworks */,
-				E4E57E961F60819F00AA35C9 /* CopyFiles */,
-				E4E57E971F6081A500AA35C9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -468,6 +501,10 @@
 					ProjectRef = E4E57E6C1F60812700AA35C9 /* Kingfisher.xcodeproj */;
 				},
 				{
+					ProductGroup = E4B5934B1F773F3500E7178D /* Products */;
+					ProjectRef = E4B5934A1F773F3500E7178D /* Material.xcodeproj */;
+				},
+				{
 					ProductGroup = E4F9396E1F4C927A0000B37F /* Products */;
 					ProjectRef = E4F9396D1F4C927A0000B37F /* SQLite.xcodeproj */;
 				},
@@ -481,6 +518,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		E4B5934F1F773F3500E7178D /* Material.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Material.framework;
+			remoteRef = E4B5934E1F773F3500E7178D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		E4E57E7C1F60812700AA35C9 /* Kingfisher.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -622,8 +666,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F939581F4C90790000B37F /* LaunchScreen.storyboard in Resources */,
-				E491FBDF1F5B28470062044D /* NemeanDatabase.sqlite3 in Resources */,
 				E4F939551F4C90790000B37F /* Assets.xcassets in Resources */,
+				E4C65D3F1F646338007F8831 /* NemeanDatabase.sqlite3 in Resources */,
 				E4F939531F4C90790000B37F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,7 +676,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E491FBE01F5B28470062044D /* NemeanDatabase.sqlite3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,15 +687,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F939501F4C90790000B37F /* ViewController.swift in Sources */,
+				E4B593561F797F0B00E7178D /* ScreenTableViewCell.swift in Sources */,
 				E47DF6071F53DA7100BE10D6 /* Image.swift in Sources */,
+				E4B593541F797AF000E7178D /* NavigationDrawerTableViewController.swift in Sources */,
+				E4B593591F7AAAB000E7178D /* NavDrawerRootViewController.swift in Sources */,
 				E4CC58BD1F4CB12D000A3844 /* ImageDataObject.swift in Sources */,
 				E491FBDC1F5B10070062044D /* ConstraintDataObject.swift in Sources */,
+				E4B593491F773E4300E7178D /* AppToolbarController.swift in Sources */,
 				E4CC58C11F4CB383000A3844 /* ScreenDataObject.swift in Sources */,
+				E4B593471F773DE200E7178D /* LeftViewController.swift in Sources */,
 				E491FBD71F587D670062044D /* Screen.swift in Sources */,
 				E4F9394E1F4C90790000B37F /* AppDelegate.swift in Sources */,
 				E4CC58BB1F4CAC4D000A3844 /* AppDataDataObject.swift in Sources */,
 				E4CC58BF1F4CB321000A3844 /* TextfieldDataObject.swift in Sources */,
+				E46439D61F6AFA05009C2641 /* PageSwipeViewController.swift in Sources */,
+				E4B593521F77419000E7178D /* TransitionedViewController.swift in Sources */,
 				E4B7E2F61F5205A9003C46A3 /* DataObjectProtocol.swift in Sources */,
+				E4B593791F7B282400E7178D /* TabNavViewController.swift in Sources */,
+				E4B593651F7B209000E7178D /* RootAppToolbarController.swift in Sources */,
 				E4F9398D1F4C93870000B37F /* NemeanDatabase.swift in Sources */,
 				E491FBD51F5746B10062044D /* MainViewController.swift in Sources */,
 			);
