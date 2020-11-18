@@ -24,11 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //MARK: Make calls to API prior to running the rest of the bollocks:
         
+
         
-        //let apiURL = URL(string: "http://greenrrepublic.com/api/11a6b9b5-c215-49c0-96cf-0a750e30297a/mobile_oauth")
-        //let apiURL = URL(string: "http://greenrrepublic.com/api/11a6b9b5-c215-49c0-96cf-0a750e30297a/mobile_oauth?access_token=9jWxXItCGF5PBVGbY6OyJQKf8ecdWGBcsQuzEBCr")
-        
-        let apiURL = URL(string: "http://greenrrepublic.com/api/11a6b9b5-c215-49c0-96cf-0a750e30297a/mobile")
+        let apiURL = URL(string: "")
         
         //let task = URLSession.shared.dataTask(with: apiURL!) {(data, response, error) in
         URLSession.shared.dataTask(with: apiURL!) {(data, response, error) in
