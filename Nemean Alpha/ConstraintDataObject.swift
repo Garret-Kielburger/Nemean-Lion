@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ConstraintDataObject{
+class ConstraintDataObject {
     
     var screen_uuid: String
     var start_id: String

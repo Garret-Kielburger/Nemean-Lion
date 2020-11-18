@@ -37,7 +37,7 @@ class TabNavViewController : UITabBarController {
 extension TabNavViewController {
     fileprivate func prepareToolbar() {
         print("preparing TabNavViewController toolbar title. tabBarItem title: \(self.tabBarItem.title)")
-        print("preparing TabNavViewController toolbar title. navigationItem title: \(self.navigationItem.title)")
+        //print("preparing TabNavViewController toolbar title. navigationItem title: \(self.navigationItem.title)")
         
         guard let tc = toolbarController else {
             print("No ToolbarController")

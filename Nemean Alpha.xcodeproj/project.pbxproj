@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4229AA01F85236100661D00 /* TextAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4229A9F1F85236100661D00 /* TextAPI.swift */; };
+		E4229AA21F85236D00661D00 /* ImageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4229AA11F85236D00661D00 /* ImageAPI.swift */; };
+		E4229AA41F85237700661D00 /* ScreenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4229AA31F85237700661D00 /* ScreenAPI.swift */; };
 		E46439D61F6AFA05009C2641 /* PageSwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46439D51F6AFA05009C2641 /* PageSwipeViewController.swift */; };
 		E47DF6071F53DA7100BE10D6 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DF6061F53DA7100BE10D6 /* Image.swift */; };
 		E491FBD51F5746B10062044D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E491FBD41F5746B10062044D /* MainViewController.swift */; };
@@ -230,6 +233,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E4229A9F1F85236100661D00 /* TextAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAPI.swift; sourceTree = "<group>"; };
+		E4229AA11F85236D00661D00 /* ImageAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAPI.swift; sourceTree = "<group>"; };
+		E4229AA31F85237700661D00 /* ScreenAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenAPI.swift; sourceTree = "<group>"; };
 		E46439D51F6AFA05009C2641 /* PageSwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageSwipeViewController.swift; sourceTree = "<group>"; };
 		E47DF6061F53DA7100BE10D6 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E491FBD41F5746B10062044D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -285,6 +291,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E4229A8C1F85233600661D00 /* API stuff */ = {
+			isa = PBXGroup;
+			children = (
+				E4229A9F1F85236100661D00 /* TextAPI.swift */,
+				E4229AA11F85236D00661D00 /* ImageAPI.swift */,
+				E4229AA31F85237700661D00 /* ScreenAPI.swift */,
+			);
+			name = "API stuff";
+			sourceTree = "<group>";
+		};
 		E47DF6051F53DA2900BE10D6 /* ViewObjects */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +388,7 @@
 		E4F9394C1F4C90790000B37F /* Nemean Alpha */ = {
 			isa = PBXGroup;
 			children = (
+				E4229A8C1F85233600661D00 /* API stuff */,
 				E4B593571F7AA88C00E7178D /* NavigationDrawerViewControllers */,
 				E47DF6051F53DA2900BE10D6 /* ViewObjects */,
 				E4CC58B91F4CAC20000A3844 /* DataObjects */,
@@ -687,12 +704,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F939501F4C90790000B37F /* ViewController.swift in Sources */,
+				E4229AA21F85236D00661D00 /* ImageAPI.swift in Sources */,
 				E4B593561F797F0B00E7178D /* ScreenTableViewCell.swift in Sources */,
 				E47DF6071F53DA7100BE10D6 /* Image.swift in Sources */,
+				E4229AA41F85237700661D00 /* ScreenAPI.swift in Sources */,
 				E4B593541F797AF000E7178D /* NavigationDrawerTableViewController.swift in Sources */,
 				E4B593591F7AAAB000E7178D /* NavDrawerRootViewController.swift in Sources */,
 				E4CC58BD1F4CB12D000A3844 /* ImageDataObject.swift in Sources */,
 				E491FBDC1F5B10070062044D /* ConstraintDataObject.swift in Sources */,
+				E4229AA01F85236100661D00 /* TextAPI.swift in Sources */,
 				E4B593491F773E4300E7178D /* AppToolbarController.swift in Sources */,
 				E4CC58C11F4CB383000A3844 /* ScreenDataObject.swift in Sources */,
 				E4B593471F773DE200E7178D /* LeftViewController.swift in Sources */,
@@ -863,6 +883,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				INFOPLIST_FILE = "Nemean Alpha/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -877,6 +898,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				INFOPLIST_FILE = "Nemean Alpha/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

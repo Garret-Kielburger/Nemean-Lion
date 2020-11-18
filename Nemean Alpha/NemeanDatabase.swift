@@ -14,8 +14,7 @@ class NemeanDatabase {
     
      
     // MARK: Declarations
-     
- 
+    
     
     // TABLES
     private let app_table = Table("app_data")

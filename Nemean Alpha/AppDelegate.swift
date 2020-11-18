@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import Foundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Initialize the window
         window = UIWindow(frame: UIScreen.main.bounds)
+        
+        
+        //MARK: Make calls to API prior to running the rest of the bollocks:
+        
+        
+        //let apiURL = URL(string: "http://greenrrepublic.com/api/11a6b9b5-c215-49c0-96cf-0a750e30297a/mobile_oauth")
+        //let apiURL = URL(string: "http://greenrrepublic.com/api/11a6b9b5-c215-49c0-96cf-0a750e30297a/mobile_oauth?access_token=9jWxXItCGF5PBVGbY6OyJQKf8ecdWGBcsQuzEBCr")
+        
+        let apiURL = URL(string: "http://greenrrepublic.com/api/11a6b9b5-c215-49c0-96cf-0a750e30297a/mobile")
+        
+        //let task = URLSession.shared.dataTask(with: apiURL!) {(data, response, error) in
+        URLSession.shared.dataTask(with: apiURL!) {(data, response, error) in
+            
+            do {
+                let data = data
+                if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String:Any] {
+                    for item in json {
+                        print(item)
+                        
+                        
+                        
+                    }
+                }
+            } catch let error as NSError {
+                print(error.debugDescription)
+            }
+            //print(NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
+            
+
+        }.resume()
+    
+        
         
         screens = NemeanDatabase.instance.getAllScreens()
         
@@ -101,23 +134,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+        print("applicationWillResignActive called")
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        print("applicationDidEnterBackground called")
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        print("applicationDidEnterForeground called")
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        print("applicationDidBecomeActive called")
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        print("applicationWillTerminate called")
     }
 
 

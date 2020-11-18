@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
         self.screen_uuid = screen_uuid
         screen_name = NemeanDatabase.instance.getScreenMetadata(given_screen_uuid: screen_uuid).name
         self.title = screen_name
-        self.navigationItem.title = screen_name
+        //self.navigationItem.title = screen_name
       
     }
     
